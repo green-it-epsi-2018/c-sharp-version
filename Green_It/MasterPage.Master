@@ -8,6 +8,7 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
      <a href="Default.aspx">Traitement fichier CSV</a>
+     <a href="Pictures.aspx">Afficher les images</a>
     
 
     </asp:ContentPlaceHolder>
