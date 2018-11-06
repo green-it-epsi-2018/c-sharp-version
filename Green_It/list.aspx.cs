@@ -9,14 +9,12 @@ using System.Web.UI.WebControls;
 
 namespace Green_It
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class list : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
-
         /// <summary>
         /// Send Data
         /// </summary>
@@ -25,18 +23,15 @@ namespace Green_It
         protected void btnSend_Click(object sender, EventArgs e)
         {
             DateTime DateLancement = DateTime.Now;
-            lblResult.Text = string.Empty;
-         
-            List<string> _ListData = Utils.ReadFileCSV(new StreamReader(fileUpload.PostedFile.InputStream));
-            Parallel.ForEach(_ListData, data =>
-             {
-                 lblResult.Text += data;
-             });
+            gvList.DataSource = Utils.ReadCsvFile(new StreamReader(fileUpload.PostedFile.InputStream));
+            gvList.DataBind();
+
             DateTime DateFin = DateTime.Now;
             TimeSpan Difference = DateFin - DateLancement;
 
             lblChrono.Text = "Temps passé: " + Difference.Hours.ToString("d2") + " Hours :" + Difference.Minutes.ToString("d2") + " Minutes :";
             lblChrono.Text += Difference.Seconds.ToString("d2") + " Seconds :" + Difference.Milliseconds.ToString("d2") + " Milliseconds";
         }
+
     }
 }

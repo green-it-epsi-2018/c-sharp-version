@@ -78,6 +78,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="hachages.aspx" />
     <Content Include="images\image1.jpg" />
     <Content Include="images\image10.jpg" />
     <Content Include="images\image2.jpg" />
@@ -88,6 +89,7 @@
     <Content Include="images\image7.jpg" />
     <Content Include="images\image8.jpg" />
     <Content Include="images\image9.jpg" />
+    <Content Include="list.aspx" />
     <Content Include="MasterPage.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
@@ -115,6 +117,20 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="hachages.aspx.cs">
+      <DependentUpon>hachages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hachages.aspx.designer.cs">
+      <DependentUpon>hachages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Green_It.Default"
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="list.aspx.cs" Inherits="Green_It.list"
     MasterPageFile="~/MasterPage.Master" %>
 
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -11,6 +11,7 @@
         beginDate = + new Date()
 
     </script>
+    <asp:Label runat="server" ID="lblChrono" Font-Bold="true"></asp:Label><br />
     <center>
         <asp:Table Id="tblFile" runat="server">
         <asp:TableRow>
@@ -20,14 +21,14 @@
             </asp:TableCell>
         </asp:TableRow>
         <asp:TableRow>
-            <asp:TableCell RowSpan="2" HorizontalAlign="Right">
+            <asp:TableCell HorizontalAlign="Right">
                 <asp:Button ID="btnSend" Text ="Envoyer"  runat ="server" OnClick="btnSend_Click"/>
             </asp:TableCell>
+        
         </asp:TableRow>
     </asp:Table>
+           <asp:GridView ID="gvList" AutoGenerateColumns="true" runat="server"  ></asp:GridView>
  </center>
-    <asp:Label runat="server" ID="lblChrono" Font-Bold="true"></asp:Label><br />
-    <asp:Label runat="server" ID="lblResult"></asp:Label>
+
+
 </asp:Content>
-
-

@@ -4,20 +4,35 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
-     <a href="Default.aspx">Traitement fichier CSV</a>
-     <a href="Pictures.aspx">Afficher les images</a>
-    
-
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <asp:Table runat="server" Width="100%">
+                <asp:TableRow>
+                    <asp:TableHeaderCell>
+                        <a href="Default.aspx">Traitement fichier CSV</a>
 
+                    </asp:TableHeaderCell>
+                    <asp:TableHeaderCell> 
+                        <a href="Pictures.aspx">Afficher les images</a>
+
+                    </asp:TableHeaderCell>
+                    <asp:TableHeaderCell>  
+            <a href="list.aspx">Chargement d’une liste d'éléments à partir d'un fichier CSV</a>
+                    </asp:TableHeaderCell>
+                          <asp:TableHeaderCell>  
+            <a href="hachages.aspx">Compilation de hachages de fichiers</a>
+                    </asp:TableHeaderCell>
+                </asp:TableRow>
+            </asp:Table>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 Contenu
             </asp:ContentPlaceHolder>
         </div>
