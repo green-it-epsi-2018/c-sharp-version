@@ -25,7 +25,7 @@ namespace Green_It
 
             foreach (string data in _ListData)
             {
-                lblResult.Text += Utils.HashesCsvFile(data) + "<br><br>";
+                lblResult.Text += Utils.HashesCsvFile(data.Replace("<br>", "")) + " <br><br>";
             }
            /* Parallel.ForEach(_ListData, data =>
             {
