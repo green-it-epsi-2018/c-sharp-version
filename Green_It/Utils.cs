@@ -79,5 +79,16 @@ namespace Green_It
 
             return sb.ToString();
         }
+
+        public static int getNumber()
+        {
+            return callWebService().Randam();
+        }
+
+        public static localhost.WebService callWebService()
+        {
+            localhost.WebService _WebService = new localhost.WebService();
+            return _WebService;
+        }
     }
 }

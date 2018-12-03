@@ -12,7 +12,8 @@
         beginDate = + new Date()
 
     </script>
-    <asp:Image ID="img1" runat="server" Width="100%" />
-
-    <asp:Panel runat="server" ID="pnlContent"></asp:Panel>
+    <asp:Panel runat="server" Style="top: 5%;">
+        <h3>Chargement d’une page avec plusieurs images</h3>
+        <asp:Panel runat="server" ID="pnlContent"></asp:Panel>
+    </asp:Panel>
 </asp:Content>

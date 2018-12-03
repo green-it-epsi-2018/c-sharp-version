@@ -25,15 +25,21 @@
                     <asp:TableHeaderCell>  
             <a href="list.aspx">Chargement d’une liste d'éléments à partir d'un fichier CSV</a>
                     </asp:TableHeaderCell>
-                          <asp:TableHeaderCell>  
+                    <asp:TableHeaderCell>  
             <a href="hachages.aspx">Compilation de hachages de fichiers</a>
                     </asp:TableHeaderCell>
+                    <asp:TableHeaderCell>  
+            <a href="Randam.aspx">Générer un nombre aléatoire</a>
+                    </asp:TableHeaderCell>
+                    <asp:TableHeaderCell>  
+            <a href="CallWebService.aspx">Appel web service</a>
+                    </asp:TableHeaderCell>
                 </asp:TableRow>
+
             </asp:Table>
         </div>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                Contenu
             </asp:ContentPlaceHolder>
         </div>
     </form>

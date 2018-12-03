@@ -27,12 +27,7 @@ namespace Green_It
             {
                 lblResult.Text += Utils.HashesCsvFile(data.Replace("<br>", "")) + " <br><br>";
             }
-           /* Parallel.ForEach(_ListData, data =>
-            {
-                lblResult.Text += Utils.HashesCsvFile(data);
-            });*/
-
-
+      
             DateTime DateFin = DateTime.Now;
             TimeSpan Difference = DateFin - DateLancement;
 

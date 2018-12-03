@@ -10,15 +10,24 @@
 namespace Green_It {
     
     
-    public partial class Pictures {
+    public partial class Randam {
         
         /// <summary>
-        /// Contrôle pnlContent.
+        /// Contrôle lblChrono.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlContent;
+        protected global::System.Web.UI.WebControls.Label lblChrono;
+        
+        /// <summary>
+        /// Contrôle lblResult.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResult;
     }
 }
