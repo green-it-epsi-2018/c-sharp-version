@@ -3,14 +3,14 @@
 
 
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
     <script>
-        let beginDate;
         window.onload = () => {
+            let beginDate = +document.querySelector("[id$=startDate]").textContent;
             const endDate = + new Date()
-            console.log(beginDate, endDate, (endDate - beginDate) / 1000 + "s")
+            console.log(beginDate, endDate, (endDate - beginDate) / 1000 + "s");
         }
-        beginDate = + new Date()
-
+    
     </script>
     <asp:Panel runat="server" Style="top: 5%;">
         <h3>Chargement d’une page avec plusieurs images</h3>
