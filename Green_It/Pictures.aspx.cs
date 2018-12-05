@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-
+using System.Web.Configuration;
 
 namespace Green_It
 {
@@ -10,7 +10,7 @@ namespace Green_It
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string[] filePaths = Directory.GetFiles(@"C: \Users\Utilisateur\source\repos\Green_It\Green_It\images\", "*.jpg");
+            string[] filePaths = Directory.GetFiles(@"" + WebConfigurationManager.AppSettings["PathImage"] + "", "*.jpg");
             foreach (string file in filePaths)
             {
                 byte[] imageArray = File.ReadAllBytes(file);
