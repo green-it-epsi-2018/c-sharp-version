@@ -22,15 +22,13 @@ namespace Green_It
         /// <param name="e"></param>
         protected void btnSend_Click(object sender, EventArgs e)
         {
-            DateTime DateLancement = DateTime.Now;
+            Int64 unixTimestamp = (Int64)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalMilliseconds;
+
             gvList.DataSource = Utils.ReadCsvFile(new StreamReader(fileUpload.PostedFile.InputStream));
             gvList.DataBind();
 
-            DateTime DateFin = DateTime.Now;
-            TimeSpan Difference = DateFin - DateLancement;
-
-            lblChrono.Text = "Temps passé: " + Difference.Hours.ToString("d2") + " Hours :" + Difference.Minutes.ToString("d2") + " Minutes :";
-            lblChrono.Text += Difference.Seconds.ToString("d2") + " Seconds :" + Difference.Milliseconds.ToString("d2") + " Milliseconds";
+            lblChrono.ID = "startDate";
+            lblChrono.Text = ""+ unixTimestamp;
         }
 
     }

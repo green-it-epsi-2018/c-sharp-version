@@ -18,8 +18,6 @@ namespace Green_It
             while (!csvreader.EndOfStream)
             {
                 _Data.Add(csvreader.ReadLine() + "<br>");
-                if (_Data.Count > 20)
-                    return _Data;
             }
             return _Data;
         }

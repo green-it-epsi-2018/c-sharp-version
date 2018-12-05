@@ -2,25 +2,6 @@
     MasterPageFile="~/MasterPage.Master" %>
 
 <asp:content contentplaceholderid="ContentPlaceHolder1" runat="server">
-<script>
-    let beginDate;
-    window.onload = () => {
-        const endDate = + new Date()
-        console.log(beginDate, endDate, (endDate - beginDate) / 1000 + "s")
-    }
-    beginDate = + new Date()
-
-</script>
-
-      <script>
-        let beginDate;
-        window.onload = () => {
-            const endDate = + new Date()
-            console.log(beginDate, endDate, (endDate - beginDate) / 1000 + "s")
-        }
-        beginDate = + new Date()
-
-    </script>
     <asp:Panel runat="server" style="top: 5%;">
         <h3>Chargement d’un fichier haché par le serveur</h3>
     <center>
